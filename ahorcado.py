@@ -250,7 +250,9 @@ while exit==False:
   * Nicolas Cartalla
         nicolas.cartalla@correo.ucu.edu.uy
   * Valentina Cabrera
-        valentina.cabreram@correo.ucu.edu.uy""")
+        valentina.cabreram@correo.ucu.edu.uy
+Repositorio del Juego:
+        https://github.com/nicocartalla/ahorcado.git""")
         input()
 
     if ans=="3":
