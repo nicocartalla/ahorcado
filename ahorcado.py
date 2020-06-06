@@ -1,4 +1,5 @@
 import os
+os.system('python -m pip install -r requirements.txt')
 import colorama
 import random
 import time
