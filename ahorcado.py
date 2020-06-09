@@ -1,5 +1,6 @@
 import os
 os.system('python -m pip install -r requirements.txt')
+
 import colorama
 import random
 import time
@@ -103,7 +104,7 @@ def top5():
     arch = open("partidas", "r")
     for p in arch:
         partidas.append(p.replace("\n", "").split("|"))
-    partidas = sorted(partidas, key=lambda x: int(x[1])-int(x[2]))
+    partidas = sorted(partidas, key=lambda x: int(x[1])/int(x[2]))
     if len(partidas)>5:
         partidas=partidas[:5]
     return partidas
@@ -147,7 +148,16 @@ while exit==False:
         clear()
 
         palabra=palabras[random.randint(0,len(palabras)-1)]
-        lineas="_ "*(len(palabra)-1)+"_"
+        lineas=""
+        for a in range(len(palabra)-1):
+            if palabra[a]!=" ":
+                lineas+="_ "
+            else:
+                lineas+="⠀ "
+        if palabra[len(palabra)-1]!=" ":
+            lineas+="_"
+        else:
+            lineas+="⠀"
 
         error=0
         LetrasUsadas=""
@@ -252,8 +262,9 @@ while exit==False:
         nicolas.cartalla@correo.ucu.edu.uy
   * Valentina Cabrera
         valentina.cabreram@correo.ucu.edu.uy
-Repositorio del Juego:
-        https://github.com/nicocartalla/ahorcado.git""")
+
+Repositorio del juego:
+    https://github.com/nicocartalla/ahorcado.git""")
         input()
 
     if ans=="3":
